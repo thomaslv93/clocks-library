@@ -52,7 +52,9 @@ class LinearClock():
         return betas.fillna(method(betas))
     
     # Accepts a dataframe with a very specific form
-    # Indices contain mouse chromosome names
+    # Indices contain valid CpG identifiers
+    # Different for mouse vs humans:
+    # chr10_115250413 (chromosome_position) vs. cg02582848 (standard human CpG identifier)
     # Values are in [0, 1] or are nan
     def get_age(self, 
                 betas, 
