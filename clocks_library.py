@@ -1,24 +1,25 @@
+import os
 import numpy as np
 import pandas as pd
 
 DAYS_IN_MONTH = 365/12
 
 # current path
-CURRENT_PATH               =    '/home/tlv/projects/clock-library/'
+CURRENT_PATH               =    os.path.dirname(__file__)
 
 # mouse clock paths
-MEER_CLOCK_PATH            =    CURRENT_PATH + 'Clocks/Mouse/MeerClock.tsv'
-PETKOVICH_CLOCK_PATH       =    CURRENT_PATH + 'Clocks/Mouse/PetkovichClock.tsv'
-THOMPSON_CLOCK_PATH        =    CURRENT_PATH + 'Clocks/Mouse/ThompsonClock-all.tsv'
-WANG_CLOCK_PATH            =    CURRENT_PATH + 'Clocks/Mouse/WangLiver.tsv'
+MEER_CLOCK_PATH            =    os.path.join(CURRENT_PATH, 'Clocks/Mouse/MeerClock.tsv')
+PETKOVICH_CLOCK_PATH       =    os.path.join(CURRENT_PATH, 'Clocks/Mouse/PetkovichClock.tsv')
+THOMPSON_CLOCK_PATH        =    os.path.join(CURRENT_PATH, 'Clocks/Mouse/ThompsonClock-all.tsv')
+WANG_CLOCK_PATH            =    os.path.join(CURRENT_PATH, 'Clocks/Mouse/WangLiver.tsv')
       
 # human clock paths      
-HORVATH_CLOCK_PATH         =    CURRENT_PATH + 'Clocks/Human/Horvath2013.tsv'
-HANNUM_CLOCK_PATH          =    CURRENT_PATH + 'Clocks/Human/Hannum2013.tsv'
-PHENOAGE_CLOCK_PATH        =    CURRENT_PATH + 'Clocks/Human/PhenoAge.tsv'
-DUNEDIN_CLOCK_PATH         =    CURRENT_PATH + 'Clocks/Human/Dunedin.tsv'
-PEDBE_CLOCK_PATH           =    CURRENT_PATH + 'Clocks/Human/PedBE.tsv'
-ZHANG_CLOCK_PATH           =    CURRENT_PATH + 'Clocks/Human/Zhang2019.tsv'
+HORVATH_CLOCK_PATH         =    os.path.join(CURRENT_PATH, 'Clocks/Human/Horvath2013.tsv')
+HANNUM_CLOCK_PATH          =    os.path.join(CURRENT_PATH, 'Clocks/Human/Hannum2013.tsv')
+PHENOAGE_CLOCK_PATH        =    os.path.join(CURRENT_PATH, 'Clocks/Human/PhenoAge.tsv')
+DUNEDIN_CLOCK_PATH         =    os.path.join(CURRENT_PATH, 'Clocks/Human/Dunedin.tsv')
+PEDBE_CLOCK_PATH           =    os.path.join(CURRENT_PATH, 'Clocks/Human/PedBE.tsv')
+ZHANG_CLOCK_PATH           =    os.path.join(CURRENT_PATH, 'Clocks/Human/Zhang2019.tsv')
 
 # mouse clock constants   
 MEER_CLOCK_INTERCEPT       =    234.64
